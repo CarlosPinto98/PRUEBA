@@ -14,6 +14,8 @@ import java.util.List;
 
 public interface FlightRepository extends JpaRepository<Flight, Long> {
 
+    List<Flight> findFlightByAirline_NameIgnoreCase(String airlineName, Pageable pageable);
+
     @Query("""
 
     select f 

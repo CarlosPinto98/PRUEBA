@@ -22,6 +22,7 @@ public class Booking {
     @ManyToOne
     @JoinColumn(name ="passengerId")
     private Passenger passenger;
+
     @OneToMany(mappedBy = "booking")
     private List<BookingItem> items;
 
