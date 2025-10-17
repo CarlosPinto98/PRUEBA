@@ -4,7 +4,7 @@ import com.unimag.aeropuerto.DTO.PassengerDTO;
 import com.unimag.aeropuerto.entidad.Passenger;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
-import org.springframework.web.bind.annotation.Mapping;
+import org.mapstruct.Mapping;
 
 
 

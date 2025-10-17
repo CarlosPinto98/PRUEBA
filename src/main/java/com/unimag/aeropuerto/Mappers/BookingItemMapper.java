@@ -5,7 +5,7 @@ import com.unimag.aeropuerto.entidad.*;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
-import org.springframework.web.bind.annotation.Mapping;
+import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface BookingItemMapper {
@@ -26,7 +26,7 @@ public interface BookingItemMapper {
     }
     default Long mapFlightToId(Flight flight) {
         if (flight == null) {return null;}
-        return flight.getId();
+        return (long) flight.getId();
     }
 
 

@@ -4,7 +4,7 @@ import com.unimag.aeropuerto.DTO.FlightDTO;
 import com.unimag.aeropuerto.entidad.Flight;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
-import org.springframework.web.bind.annotation.Mapping;
+import org.mapstruct.Mapping;
 
 
 @Mapper(componentModel = "spring", uses = {AirlineMapper.class, AirportMapper.class, SeatInventoryMapper.class, TagMapper.class,})

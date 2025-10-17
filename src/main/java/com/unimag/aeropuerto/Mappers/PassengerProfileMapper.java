@@ -3,7 +3,7 @@ package com.unimag.aeropuerto.Mappers;
 import com.unimag.aeropuerto.DTO.PassengerProfileDTO;
 import com.unimag.aeropuerto.entidad.PassengerProfile;
 import org.mapstruct.MappingTarget;
-import org.springframework.web.bind.annotation.Mapping;
+import org.mapstruct.Mapping;
 
 public interface PassengerProfileMapper {
 

@@ -5,7 +5,7 @@ import com.unimag.aeropuerto.entidad.Flight;
 import com.unimag.aeropuerto.entidad.SeatInventory;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
-import org.springframework.web.bind.annotation.Mapping;
+import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 
