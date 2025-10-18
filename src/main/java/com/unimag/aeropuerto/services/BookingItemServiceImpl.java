@@ -27,10 +27,10 @@ public class BookingItemServiceImpl implements BookingItemService {
     private final FlightServiceImpl flightServiceImpl;
 
     @Override
-    public BookingItemDTO.bookingItemReponse create(BookingItemDTO.bookingItemCreateRequest bookingItemCreateRequest) {
-        BookingItem bookingItem = bookingItemMapper.toEntity(request);
-        Flight f = flightServiceImpl.getFlightObject(request.fligthId());
-        Booking b = bookingServiceImpl.getObject(request.bookingId());
+    public BookingItemDTO.bookingItemReponse create(BookingItemDTO.bookingItemCreateRequest CreateRequest) {
+        BookingItem bookingItem = bookingItemMapper.toEntity(CreateRequest);
+        Flight f = flightServiceImpl.getFlightObject(CreateRequest.flightId());
+        Booking b = bookingServiceImpl.getObject(CreateRequest.bookingId());
 
         bookingItem.setBooking(b);
         bookingItem.setFlight(f);
@@ -50,17 +50,17 @@ public class BookingItemServiceImpl implements BookingItemService {
     }
 
     @Override
-    public BookingItemDTO.bookingItemReponse update(Long id, BookingItemDTO.bookingItemUpdateRequest bookingItemUpdateRequest) {
+    public BookingItemDTO.bookingItemReponse update(Long id, BookingItemDTO.bookingItemUpdateRequest UpdateRequest) {
         BookingItem bookingItem = findBookingItem(id);
-        bookingItemMapper.updateEntity(request, bookingItem);
-        if (bookingItem.getFlight().getId() != request.flightId()){
-            Flight f =  flightServiceImpl.getFlightObject(request.flightId());
+        bookingItemMapper.updateEntity(UpdateRequest, bookingItem);
+        if (bookingItem.getFlight().getId() != UpdateRequest.flightId()){
+            Flight f =  flightServiceImpl.getFlightObject(UpdateRequest.flightId());
             bookingItem.getFlight().getBookingItems().remove(bookingItem);
             bookingItem.setFlight(f);
 
         }
-        if (bookingItem.getBooking().getId() != request.bookingId()){
-            Booking b =  bookingServiceImpl.getObject(request.bookingId());
+        if (bookingItem.getBooking().getId() != UpdateRequest.bookingId()){
+            Booking b =  bookingServiceImpl.getObject(UpdateRequest.bookingId());
             bookingItem.getBooking().getItems().remove(bookingItem);
             bookingItem.setBooking(b);
         }

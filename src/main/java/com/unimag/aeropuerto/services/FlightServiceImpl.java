@@ -99,7 +99,7 @@ public class FlightServiceImpl implements FlightService {
             }
         }
         Flight updatedFlight = flightRepository.save(flight);
-        return flightMapper.toDTO(updatedFli);
+        return flightMapper.toDTO(updatedFlight);
     }
 
     @Override
