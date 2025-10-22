@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 @Transactional
 @RequiredArgsConstructor
 
-public class PassengerServiceimpl implements PassengerService {
+public class PassengerServiceImpl implements PassengerService {
 
     private final PassengerRepository passengerRepository;
     private final PassengerProfileServiceImpl passengerProfileService;

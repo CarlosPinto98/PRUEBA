@@ -30,7 +30,7 @@ class BookingServiceImplTest {
     @InjectMocks
     private BookingServiceImpl bookingServiceImpl;
     @Mock
-    private PassengerServiceimpl passengerService;
+    private PassengerServiceImpl passengerService;
 
 
     private final Long bookingId = 1L;

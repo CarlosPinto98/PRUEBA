@@ -18,7 +18,7 @@ import java.time.OffsetDateTime;
 
 public class BookingServiceImpl implements BookingService {
 
-    private final PassengerServiceimpl passengerService;
+    private final PassengerServiceImpl passengerService;
     private final BookingRepository bookingRepository;
     private final BookingMapper bookingMapper;
 
