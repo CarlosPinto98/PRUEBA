@@ -1,5 +1,6 @@
 package com.unimag.aeropuerto.services;
 
+import com.unimag.aeropuerto.API.Error.NotFoundException;
 import com.unimag.aeropuerto.DTO.PassengerDTO;
 import com.unimag.aeropuerto.Mappers.PassengerMapper;
 import com.unimag.aeropuerto.entidad.Passenger;

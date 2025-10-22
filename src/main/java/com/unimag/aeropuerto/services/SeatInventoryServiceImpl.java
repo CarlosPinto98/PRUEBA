@@ -1,5 +1,6 @@
 package com.unimag.aeropuerto.services;
 
+import com.unimag.aeropuerto.API.Error.NotFoundException;
 import com.unimag.aeropuerto.DTO.SeatInventoryDTO;
 import com.unimag.aeropuerto.Mappers.SeatInventoryMapper;
 import com.unimag.aeropuerto.entidad.SeatInventory;
